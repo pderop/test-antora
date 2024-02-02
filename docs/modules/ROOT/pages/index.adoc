@@ -2,4 +2,4 @@
 [[component1-documentation]]
 = Component 1 Documentation
 
-doc for component 1
+Doc for component1
