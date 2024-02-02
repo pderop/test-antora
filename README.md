@@ -1,6 +1,5 @@
-# Antora Test
-
-## Components
+#
+Components
 
 [component1](component1/reference/)
 
