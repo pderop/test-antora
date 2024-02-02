@@ -1,4 +1,9 @@
 name: Deploy Docs
+
+concurrency:
+  workflow:
+    limit: 1
+
 on:
   push:
     branches: [ main ]
