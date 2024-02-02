@@ -1,50 +1,50 @@
 {
   "$id": "https://schemas.antora.org/site-manifest/1-0-0/draft-01",
-  "generated": "2024-02-02T08:46:00.814Z",
+  "generated": "2024-02-02T08:58:25.382Z",
   "url": "https://pderop.github.io/test-antora/component1",
   "components": {
-    "test-antora": {
-      "title": "Antora Test",
+    "component1": {
+      "title": "Component 1",
       "latest": "1.0.0",
       "versions": {
         "1.0.0": {
           "prerelease": true,
           "displayVersion": "1.0.0-SNAPSHOT",
-          "url": "/test-antora/index.html",
+          "url": "/component1/index.html",
           "pages": [
             {
               "path": "admonition.adoc",
-              "url": "/test-antora/admonition.html",
+              "url": "/component1/admonition.html",
               "title": "Admonition"
             },
             {
               "path": "inline-text-formatting.adoc",
-              "url": "/test-antora/inline-text-formatting.html",
+              "url": "/component1/inline-text-formatting.html",
               "title": "Inline Text Formatting"
             },
             {
               "path": "lists/ordered-list.adoc",
-              "url": "/test-antora/lists/ordered-list.html",
+              "url": "/component1/lists/ordered-list.html",
               "title": "Ordered Lists"
             },
             {
               "path": "lists/unordered-list.adoc",
-              "url": "/test-antora/lists/unordered-list.html",
+              "url": "/component1/lists/unordered-list.html",
               "title": "Unordered Lists"
             },
             {
               "path": "sidebar.adoc",
-              "url": "/test-antora/sidebar.html",
+              "url": "/component1/sidebar.html",
               "title": "Sidebar"
             },
             {
               "path": "special-characters.adoc",
-              "url": "/test-antora/special-characters.html",
+              "url": "/component1/special-characters.html",
               "title": "Special Characters and Symbols"
             },
             {
               "path": "ui-macros.adoc",
-              "url": "/test-antora/ui-macros.html",
+              "url": "/component1/ui-macros.html",
               "title": "User Interface Macros"
             }
           ]
