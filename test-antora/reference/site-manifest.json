@@ -1,7 +1,7 @@
 {
   "$id": "https://schemas.antora.org/site-manifest/1-0-0/draft-01",
-  "generated": "2024-02-02T06:45:40.524Z",
-  "url": "https://pderop.github.io/test-antora/reference",
+  "generated": "2024-02-02T07:04:14.058Z",
+  "url": "https://pderop.github.io/test-antora/reference/inline-text-formatting.html",
   "components": {
     "test-antora": {
       "title": "Antora Test",
