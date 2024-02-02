@@ -1,7 +1,7 @@
 {
   "$id": "https://schemas.antora.org/site-manifest/1-0-0/draft-01",
-  "generated": "2024-02-02T07:10:58.822Z",
-  "url": "https://pderop.github.io/test-antora/test-antora/reference",
+  "generated": "2024-02-02T08:46:00.814Z",
+  "url": "https://pderop.github.io/test-antora/component1",
   "components": {
     "test-antora": {
       "title": "Antora Test",

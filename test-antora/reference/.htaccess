@@ -1,2 +1,1 @@
-Redirect 302 /test-antora/test-antora/reference/test-antora/1.0-SNAPSHOT /test-antora/test-antora/reference/test-antora
-Redirect 301 /test-antora/test-antora/reference/index.html /test-antora/test-antora/reference/test-antora/inline-text-formatting.html
+Redirect 302 /test-antora/component1/test-antora/1.0-SNAPSHOT /test-antora/component1/test-antora
