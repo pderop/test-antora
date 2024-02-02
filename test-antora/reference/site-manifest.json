@@ -1,0 +1,55 @@
+{
+  "$id": "https://schemas.antora.org/site-manifest/1-0-0/draft-01",
+  "generated": "2024-02-02T06:45:40.524Z",
+  "url": "https://pderop.github.io/test-antora/reference",
+  "components": {
+    "test-antora": {
+      "title": "Antora Test",
+      "latest": "1.0.0",
+      "versions": {
+        "1.0.0": {
+          "prerelease": true,
+          "displayVersion": "1.0.0-SNAPSHOT",
+          "url": "/test-antora/index.html",
+          "pages": [
+            {
+              "path": "admonition.adoc",
+              "url": "/test-antora/admonition.html",
+              "title": "Admonition"
+            },
+            {
+              "path": "inline-text-formatting.adoc",
+              "url": "/test-antora/inline-text-formatting.html",
+              "title": "Inline Text Formatting"
+            },
+            {
+              "path": "lists/ordered-list.adoc",
+              "url": "/test-antora/lists/ordered-list.html",
+              "title": "Ordered Lists"
+            },
+            {
+              "path": "lists/unordered-list.adoc",
+              "url": "/test-antora/lists/unordered-list.html",
+              "title": "Unordered Lists"
+            },
+            {
+              "path": "sidebar.adoc",
+              "url": "/test-antora/sidebar.html",
+              "title": "Sidebar"
+            },
+            {
+              "path": "special-characters.adoc",
+              "url": "/test-antora/special-characters.html",
+              "title": "Special Characters and Symbols"
+            },
+            {
+              "path": "ui-macros.adoc",
+              "url": "/test-antora/ui-macros.html",
+              "title": "User Interface Macros"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
