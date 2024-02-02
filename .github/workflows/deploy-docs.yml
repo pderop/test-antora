@@ -13,10 +13,6 @@ permissions:
   actions: write
 jobs:
   build:
-    concurrency:
-      workflow:
-        limit: 1
-
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
