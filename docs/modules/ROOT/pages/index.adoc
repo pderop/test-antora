@@ -1,5 +1,0 @@
-:noheader:
-[[component1-documentation]]
-= Component 1 Documentation
-
-Doc for component1
