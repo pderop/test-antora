@@ -13,9 +13,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        branch: [ main, main ]
-        test-type: [fast, slow, other]
-    name: Test on ${{ matrix.branch }} - ${{ matrix.test-type }} tests
+        branch: [ main, 3.5.x ]
+        test-type:
+          - type: fast
+            arguments: ":test --no-daemon -Pjunit-tags=!slow -DuseSnapshotMicrometerVersion=true"
+          - type: slow
+            arguments: ":test --no-daemon -Pjunit-tags=slow -DuseSnapshotMicrometerVersion=true"
+          - type: other
+            arguments: "check -x :test --no-daemon -DuseSnapshotMicrometerVersion=true -Pjcstress.mode=default"
+    name: Test on ${{ matrix.branch }} - ${{ matrix.test-type.type }} tests
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -31,10 +37,4 @@ jobs:
       - name: Run Gradle Tests
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: |
-            ${{ if eq(matrix.test-type, 'fast') }} 
-              :test --no-daemon -Pjunit-tags=!slow -DuseSnapshotMicrometerVersion=true
-            ${{ else if eq(matrix.test-type, 'slow') }} 
-              :test --no-daemon -Pjunit-tags=slow -DuseSnapshotMicrometerVersion=true
-            ${{ else if eq(matrix.test-type, 'other') }} 
-              check -x :test --no-daemon -DuseSnapshotMicrometerVersion=true -Pjcstress.mode=default
+          arguments: ${{ matrix.test-type.arguments }}
