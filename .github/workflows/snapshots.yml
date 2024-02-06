@@ -1,4 +1,4 @@
-name: Snapshots Check Test
+name: Snapshots Check
 
 on:
   schedule:
@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        branch: [ 3.5.x, main ]
+        branch: [ main, main ]
         test-type:
           - type: fast
             arguments: ":test -Ptest=fast"
