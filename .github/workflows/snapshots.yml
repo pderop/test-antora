@@ -16,11 +16,11 @@ jobs:
         branch: [ main, main ]
         test-type:
           - type: fast
-            arguments: ":test --no-daemon -Pjunit-tags=!slow -DuseSnapshotMicrometerVersion=true"
+            arguments: ":test --no-daemon -Ptype=fast"
           - type: slow
-            arguments: ":test --no-daemon -Pjunit-tags=slow -DuseSnapshotMicrometerVersion=true"
+            arguments: ":test --no-daemon -Ptype=slow"
           - type: other
-            arguments: "check -x :test --no-daemon -DuseSnapshotMicrometerVersion=true -Pjcstress.mode=default"
+            arguments: ":test --no-daemon -Ptype=other"
     name: Test on ${{ matrix.branch }} - ${{ matrix.test-type.type }} tests
     steps:
       - name: Checkout Repository
@@ -29,7 +29,7 @@ jobs:
           ref: ${{ matrix.branch }}
 
       - name: Setup Java
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: 17
