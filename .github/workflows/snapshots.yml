@@ -24,17 +24,17 @@ jobs:
     name: Test on ${{ matrix.branch }} - ${{ matrix.test-type.type }} tests
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # tag=v4
         with:
           ref: ${{ matrix.branch }}
 
       - name: Setup Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@0ab4596768b603586c0de567f2430c30f5b0d2b0 # tag=v3
         with:
           distribution: 'temurin'
           java-version: 17
 
       - name: Run Gradle Tests
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/gradle-build-action@842c587ad8aa4c68eeba24c396e15af4c2e9f30a # tag=v2
         with:
           arguments: ${{ matrix.test-type.arguments }}
