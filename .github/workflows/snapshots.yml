@@ -1,65 +1,40 @@
 name: Snapshots Check
 
 on:
-  schedule:
-    - cron: "0 20 * * *"
+#  schedule:
+#    - cron: "0 20 * * *"
   workflow_dispatch:
+
 permissions: read-all
+
 jobs:
-  core-fast:
-    name: core fast tests
+  run-tests:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        branch: [ main ]
+        branch: [ main, main ]
+        test-type: [fast, slow, other]
+    name: Test on ${{ matrix.branch }} - ${{ matrix.test-type }} tests
     steps:
-      - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # tag=v4
+      - name: Checkout Repository
+        uses: actions/checkout@v2
         with:
           ref: ${{ matrix.branch }}
-      - uses: actions/setup-java@0ab4596768b603586c0de567f2430c30f5b0d2b0 # tag=v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v2
         with:
           distribution: 'temurin'
           java-version: 17
-      - uses: gradle/gradle-build-action@842c587ad8aa4c68eeba24c396e15af4c2e9f30a # tag=v2
-        name: gradle
+
+      - name: Run Gradle Tests
+        uses: gradle/gradle-build-action@v2
         with:
-          arguments: :test --no-daemon -Pjunit-tags=!slow -DuseSnapshotMicrometerVersion=true
-  core-slow:
-    name: core slower tests
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        branch: [ main ]
-    steps:
-      - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # tag=v4
-        with:
-          ref: ${{ matrix.branch }}
-      - uses: actions/setup-java@0ab4596768b603586c0de567f2430c30f5b0d2b0 # tag=v3
-        with:
-          distribution: 'temurin'
-          java-version: 17
-      - uses: gradle/gradle-build-action@842c587ad8aa4c68eeba24c396e15af4c2e9f30a # tag=v2
-        name: gradle
-        with:
-          arguments: :test --no-daemon -Pjunit-tags=slow -DuseSnapshotMicrometerVersion=true
-  other:
-    name: other tests without jcstress
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        branch: [ 3.5.x, main ]
-    steps:
-      - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # tag=v4
-        with:
-          ref: ${{ matrix.branch }}
-      - uses: actions/setup-java@0ab4596768b603586c0de567f2430c30f5b0d2b0 # tag=v3
-        with:
-          distribution: 'temurin'
-          java-version: 17
-      - uses: gradle/gradle-build-action@842c587ad8aa4c68eeba24c396e15af4c2e9f30a # tag=v2
-        name: other tests
-        with:
-          arguments: check -x :test   --no-daemon -DuseSnapshotMicrometerVersion=true -Pjcstress.mode=default
+          arguments: |
+            ${{ if eq(matrix.test-type, 'fast') }} 
+              :test --no-daemon -Pjunit-tags=!slow -DuseSnapshotMicrometerVersion=true
+            ${{ else if eq(matrix.test-type, 'slow') }} 
+              :test --no-daemon -Pjunit-tags=slow -DuseSnapshotMicrometerVersion=true
+            ${{ else if eq(matrix.test-type, 'other') }} 
+              check -x :test --no-daemon -DuseSnapshotMicrometerVersion=true -Pjcstress.mode=default
