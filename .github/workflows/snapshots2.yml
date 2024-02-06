@@ -1,9 +1,8 @@
-name: Snapshots Check (2)
+name: Snapshots Check
 
 on:
-#  schedule:
-#    - cron: "0 20 * * *"
-  workflow_dispatch:
+  schedule:
+    - cron: "0 20 * * *"
 permissions: read-all
 jobs:
   run-tests:
@@ -11,18 +10,18 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        branch: [ main, main ]
+        branch: [ 3.5.x, main ]
         test-type:
           - type: fast
-            arguments: ":test -Ptest=fast"
+            arguments: ":reactor-core:test --no-daemon -Pjunit-tags=!slow -DuseSnapshotMicrometerVersion=true"
           - type: slow
-            arguments: ":test -Ptest=slow"
+            arguments: ":reactor-core:test --no-daemon -Pjunit-tags=slow -DuseSnapshotMicrometerVersion=true"
           - type: other
-            arguments: ":test -Ptest=other"
+            arguments: "check -x :reactor-core:test -x spotlessCheck -x :reactor-core:jcstress --no-daemon -DuseSnapshotMicrometerVersion=true -Pjcstress.mode=default"
     name: Test on ${{ matrix.branch }} - ${{ matrix.test-type.type }} tests
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # tag=v4
         with:
           ref: ${{ matrix.branch }}
 
@@ -30,7 +29,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: 17
+          java-version: 8
 
       - name: Run Gradle Tests
         uses: gradle/actions/setup-gradle@v3

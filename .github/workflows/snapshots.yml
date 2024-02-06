@@ -1,26 +1,23 @@
-name: Snapshots Check
+name: Snapshots Check Test
 
 on:
-#  schedule:
-#    - cron: "0 20 * * *"
-  workflow_dispatch:
-
+  schedule:
+    - cron: "0 20 * * *"
 permissions: read-all
-
 jobs:
   run-tests:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        branch: [ main, main ]
+        branch: [ 3.5.x, main ]
         test-type:
           - type: fast
-            arguments: ":test --no-daemon -Ptype=fast"
+            arguments: ":test -Ptest=fast"
           - type: slow
-            arguments: ":test --no-daemon -Ptype=slow"
+            arguments: ":test -Ptest=slow"
           - type: other
-            arguments: ":test --no-daemon -Ptype=other"
+            arguments: ":test -Ptest=other"
     name: Test on ${{ matrix.branch }} - ${{ matrix.test-type.type }} tests
     steps:
       - name: Checkout Repository
@@ -32,7 +29,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: 17
+          java-version: 8
 
       - name: Run Gradle Tests
         uses: gradle/actions/setup-gradle@v3
