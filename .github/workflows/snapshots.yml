@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        branch: [ main, main ]
+        branch: [ main ]
         test-type:
           - type: fast
             #arguments: ":reactor-core:test --no-daemon -Pjunit-tags=!slow -DuseSnapshotMicrometerVersion=true"
