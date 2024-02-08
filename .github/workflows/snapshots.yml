@@ -11,17 +11,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        branch: [ main ]
+        branch: [ main, mybranch ]
         test-type:
           - type: fast
-            #arguments: ":reactor-core:test --no-daemon -Pjunit-tags=!slow -DuseSnapshotMicrometerVersion=true"
             arguments: ":test -Ptest=fast"
           - type: slow
-            #arguments: ":reactor-core:test --no-daemon -Pjunit-tags=slow -DuseSnapshotMicrometerVersion=true"
             arguments: ":test -Ptest=slow"
           - type: other
-            #arguments: "check -x :reactor-core:test -x spotlessCheck -x :reactor-core:jcstress --no-daemon -DuseSnapshotMicrometerVersion=true -Pjcstress.mode=default"
             arguments: ":test -Ptest=other"
+        exclude:
+          - branch: mybranch
+            test-type: other
     name: Test on ${{ matrix.branch }} - ${{ matrix.test-type.type }} tests
     steps:
       - name: Checkout Repository
