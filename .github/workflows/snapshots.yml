@@ -21,7 +21,7 @@ jobs:
             arguments: ":test -Ptest=other"
         exclude:
           - branch: mybranch
-            test-type.type: other
+            type: other
     name: Test on ${{ matrix.branch }} - ${{ matrix.test-type.type }} tests
     steps:
       - name: Checkout Repository
