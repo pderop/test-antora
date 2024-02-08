@@ -3,33 +3,38 @@ name: Snapshots Check
 on:
 #  schedule:
 #    - cron: "0 20 * * *"
-  workflow_dispatch
+  workflow_dispatch:
 permissions: read-all
 jobs:
   run-tests:
-    name: core fast tests
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        branch: [ main ]
+        branch: [ main, main ]
         test-type:
-          - type: core-fast
+          - type: fast
+            #arguments: ":reactor-core:test --no-daemon -Pjunit-tags=!slow -DuseSnapshotMicrometerVersion=true"
             arguments: ":test -Ptest=fast"
-          - type: core-slow
+          - type: slow
+            #arguments: ":reactor-core:test --no-daemon -Pjunit-tags=slow -DuseSnapshotMicrometerVersion=true"
             arguments: ":test -Ptest=slow"
           - type: other
+            #arguments: "check -x :reactor-core:test -x spotlessCheck -x :reactor-core:jcstress --no-daemon -DuseSnapshotMicrometerVersion=true -Pjcstress.mode=default"
             arguments: ":test -Ptest=other"
+    name: Test on ${{ matrix.branch }} - ${{ matrix.test-type.type }} tests
     steps:
       - name: Checkout Repository
         uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # tag=v4
         with:
           ref: ${{ matrix.branch }}
-      - name: Setup Java8
-        uses: actions/setup-java@0ab4596768b603586c0de567f2430c30f5b0d2b0 # tag=v3
+
+      - name: Setup Java
+        uses: actions/setup-java@387ac29b308b003ca37ba93a6cab5eb57c8f5f93 #tag=v4
         with:
           distribution: 'temurin'
           java-version: 8
+
       - name: Run Gradle Tests
         uses: gradle/actions/setup-gradle@ec92e829475ac0c2315ea8f9eced72db85bb337a # tag=v3
         with:
