@@ -1,0 +1,42 @@
+# The purpose of this Antora playbook is to build the docs in the current branch.
+antora:
+  extensions:
+    - '@springio/antora-extensions/partial-build-extension'
+    - require: '@springio/antora-extensions/latest-version-extension'
+    - require: '@springio/antora-extensions/inject-collector-cache-config-extension'
+    - '@antora/collector-extension'
+    - '@antora/atlas-extension'
+    - require: '@springio/antora-extensions/root-component-extension'
+      root_component_name: 'component1'
+site:
+  title: Component 1
+  url: https://pderop.github.io/test-antora-pages/component1/reference/
+  #start_page: component1::inline-text-formatting.adoc
+content:
+  sources:
+    - url: ./..
+      branches:
+        - 'main'
+      start_path: docs
+      worktrees: true
+asciidoc:
+  attributes:
+    page-stackoverflow-url: https://stackoverflow.com/tags/[antora]
+    page-pagination: ''
+    hide-uri-scheme: '@'
+    tabs-sync-option: '@'
+    chomp: 'all'
+  extensions:
+    - '@asciidoctor/tabs'
+    - '@springio/asciidoctor-extensions'
+  sourcemap: true
+urls:
+  latest_version_segment: ''
+runtime:
+  log:
+    failure_level: warn
+    format: pretty
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+
