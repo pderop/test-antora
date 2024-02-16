@@ -1,13 +1,15 @@
 {
   "$id": "https://schemas.antora.org/site-manifest/1-0-0/draft-01",
-  "generated": "2024-02-16T14:29:58.186Z",
+  "generated": "2024-02-16T14:32:27.023Z",
   "url": "https://pderop.github.io/test-antora",
   "components": {
     "my-component": {
       "title": "My Component",
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
-        "1.0.0": {
+        "1.0.1": {
+          "prerelease": true,
+          "displayVersion": "1.0.1-SNAPSHOT",
           "url": "/index.html",
           "pages": [
             {
