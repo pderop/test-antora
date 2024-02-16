@@ -1,6 +1,6 @@
-name: component1
+name: my-component
 version: true
-title: Component 1
+title: My Component
 nav:
   - modules/ROOT/nav.adoc
 ext:

@@ -1,5 +1,5 @@
 :noheader:
-[[component1-documentation]]
-= Component 1 Documentation
+[[my-component-documentation]]
+= My Component Documentation
 
-Doc for component1
+Doc for my-component

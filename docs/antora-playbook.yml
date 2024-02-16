@@ -7,16 +7,18 @@ antora:
     - '@antora/collector-extension'
     - '@antora/atlas-extension'
     - require: '@springio/antora-extensions/root-component-extension'
-      root_component_name: 'component1'
+      root_component_name: 'my-component'
 site:
-  title: Component 1
-  url: https://pderop.github.io/test-antora-pages/component1/reference/
-  #start_page: component1::inline-text-formatting.adoc
+  title: My Component
+  url: https://pderop.github.io/test-antora-pages/my-component/reference/
+  #start_page: my-component::inline-text-formatting.adoc
 content:
   sources:
     - url: ./..
       branches:
         - 'main'
+      tags:
+        - 'v1.0.*'
       start_path: docs
       worktrees: true
 asciidoc:
