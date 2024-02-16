@@ -1,1 +1,1 @@
-Redirect 302 /test-antora/component1/component1/1.0-SNAPSHOT /test-antora/component1/component1
+Redirect 302 /test-antora-pages/component1/reference/my-component/1.0 /test-antora-pages/component1/reference/my-component
