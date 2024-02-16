@@ -1,6 +1,6 @@
 {
   "$id": "https://schemas.antora.org/site-manifest/1-0-0/draft-01",
-  "generated": "2024-02-16T13:46:42.366Z",
+  "generated": "2024-02-16T13:54:13.367Z",
   "url": "https://pderop.github.io/test-antora",
   "components": {
     "my-component": {
@@ -8,46 +8,46 @@
       "latest": "1.0.0",
       "versions": {
         "1.0.0": {
-          "url": "/my-component/index.html",
+          "url": "/index.html",
           "pages": [
             {
               "path": "index.adoc",
-              "url": "/my-component/index.html",
+              "url": "/index.html",
               "title": "My Component Documentation"
             },
             {
               "path": "admonition.adoc",
-              "url": "/my-component/admonition.html",
+              "url": "/admonition.html",
               "title": "Admonition"
             },
             {
               "path": "inline-text-formatting.adoc",
-              "url": "/my-component/inline-text-formatting.html",
+              "url": "/inline-text-formatting.html",
               "title": "Inline Text Formatting"
             },
             {
               "path": "lists/ordered-list.adoc",
-              "url": "/my-component/lists/ordered-list.html",
+              "url": "/lists/ordered-list.html",
               "title": "Ordered Lists"
             },
             {
               "path": "lists/unordered-list.adoc",
-              "url": "/my-component/lists/unordered-list.html",
+              "url": "/lists/unordered-list.html",
               "title": "Unordered Lists"
             },
             {
               "path": "sidebar.adoc",
-              "url": "/my-component/sidebar.html",
+              "url": "/sidebar.html",
               "title": "Sidebar"
             },
             {
               "path": "special-characters.adoc",
-              "url": "/my-component/special-characters.html",
+              "url": "/special-characters.html",
               "title": "Special Characters and Symbols"
             },
             {
               "path": "ui-macros.adoc",
-              "url": "/my-component/ui-macros.html",
+              "url": "/ui-macros.html",
               "title": "User Interface Macros"
             }
           ]

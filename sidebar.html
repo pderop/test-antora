@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Inline Text Formatting :: Component1</title>
-    <link rel="canonical" href="https://pderop.github.io/test-antora/my-component/inline-text-formatting.html">
-    <link rel="prev" href="index.html">
-    <link rel="next" href="special-characters.html">
+    <title>Sidebar :: My Component</title>
+    <link rel="canonical" href="https://pderop.github.io/test-antora/sidebar.html">
+    <link rel="prev" href="admonition.html">
+    <link rel="next" href="ui-macros.html">
     <meta name="generator" content="Antora 3.2.0-alpha.2">
-    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="./_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://pderop.github.io/test-antora">Component1</a>
+      <a class="navbar-item" href="https://pderop.github.io/test-antora">My Component</a>
       <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
@@ -60,7 +60,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="inline-text-formatting.html">Inline Text Formatting</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -69,7 +69,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="admonition.html">Admonition</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="sidebar.html">Sidebar</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -117,136 +117,45 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">My Component</a></li>
-    <li><a href="inline-text-formatting.html">Inline Text Formatting</a></li>
+    <li><a href="sidebar.html">Sidebar</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/pderop/test-antora/edit/main/docs/modules/ROOT/pages/inline-text-formatting.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/pderop/test-antora/edit/main/docs/modules/ROOT/pages/sidebar.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Inline Text Formatting</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can add the following inline styles to your content:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Bold</p>
-</li>
-<li>
-<p>Italic</p>
-</li>
-<li>
-<p>Monospace</p>
-</li>
-<li>
-<p>Highlight</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
+<h1 class="page">Sidebar</h1>
 <div class="sect1">
-<h2 id="_bold_and_italic"><a class="anchor" href="#_bold_and_italic"></a>Bold and italic</h2>
+<h2 id="_sidebar_block"><a class="anchor" href="#_sidebar_block"></a>Sidebar block</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can bold and italic entire phrases, a word, and characters in a word.</p>
+<p>A sidebar can be titled and contain any type of content such as source code and images.</p>
 </div>
 <div class="listingblock">
-<div class="title">Bold and italic inline formatting</div>
+<div class="title">Sidebar</div>
 <div class="content">
-<pre>*bold phrase* &amp; **char**acter**s**
-
-_italic phrase_ &amp; __char__acter__s__
-
-*_bold italic phrase_* &amp; **__char__**acter**__s__**</pre>
+<pre>.Optional title of sidebar
+****
+Sidebars are used to visually separate short, auxiliary bits of content that supplement the main text.
+****</pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="title">Result</div>
+<div class="sidebarblock">
 <div class="content">
+<div class="title">Optional title of sidebar</div>
 <div class="paragraph">
-<p><strong>bold phrase</strong> &amp; <strong>char</strong>acter<strong>s</strong></p>
-</div>
-<div class="paragraph">
-<p><em>italic phrase</em> &amp; <em>char</em>acter<em>s</em></p>
-</div>
-<div class="paragraph">
-<p><strong><em>bold italic phrase</em></strong> &amp; <strong><em>char</em></strong>acter<strong><em>s</em></strong></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_monospace"><a class="anchor" href="#_monospace"></a>Monospace</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can monospace entire phrases, a word, and characters in a word.</p>
-</div>
-<div class="listingblock">
-<div class="title">Monospace inline formatting</div>
-<div class="content">
-<pre>`monospace phrase` &amp; ``char``acter``s``
-
-`*monospace bold phrase*` &amp; ``**char**``acter``**s**``
-
-`_monospace italic phrase_` &amp; ``__char__``acter``__s__``
-
-`*_monospace bold italic phrase_*` &amp;
-``**__char__**``acter``**__s__**``</pre>
-</div>
-</div>
-<div class="exampleblock">
-<div class="title">Result</div>
-<div class="content">
-<div class="paragraph">
-<p><code>monospace phrase</code> &amp; <code>char</code>acter<code>s</code></p>
-</div>
-<div class="paragraph">
-<p><code><strong>monospace bold phrase</strong></code> &amp; <code><strong>char</strong></code>acter<code><strong>s</strong></code></p>
-</div>
-<div class="paragraph">
-<p><code><em>monospace italic phrase</em></code> &amp; <code><em>char</em></code>acter<code><em>s</em></code></p>
-</div>
-<div class="paragraph">
-<p><code><strong><em>monospace bold italic phrase</em></strong></code> &amp;
-<code><strong><em>char</em></strong></code>acter<code><strong><em>s</em></strong></code></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_highlight"><a class="anchor" href="#_highlight"></a>Highlight</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can highlight entire phrases, a word, and characters in a word.</p>
-</div>
-<div class="listingblock">
-<div class="title">Highlight inline formatting</div>
-<div class="content">
-<pre>Let's #highlight this phrase# and part of th##is##.</pre>
-</div>
-</div>
-<div class="exampleblock">
-<div class="title">Result</div>
-<div class="content">
-<div class="paragraph">
-<p>Let&#8217;s <mark>highlight this phrase</mark> and part of th<mark>is</mark>.</p>
+<p>Sidebars are used to visually separate short, auxiliary bits of content that supplement the main text.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">My Component</a></span>
-  <span class="next"><a href="special-characters.html">Special Characters and Symbols</a></span>
+  <span class="prev"><a href="admonition.html">Admonition</a></span>
+  <span class="next"><a href="ui-macros.html">User Interface Macros</a></span>
 </nav>
 </article>
   </div>
@@ -256,7 +165,7 @@ _italic phrase_ &amp; __char__acter__s__
   <p>This page was built using the Antora default UI.</p>
   <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
-<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
-<script async src="../_/js/vendor/highlight.js"></script>
+<script id="site-script" src="./_/js/site.js" data-ui-root-path="./_"></script>
+<script async src="./_/js/vendor/highlight.js"></script>
   </body>
 </html>
