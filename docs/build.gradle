@@ -16,7 +16,7 @@ apply plugin: 'java'
 apply plugin: 'org.antora'
 apply plugin: 'io.spring.antora.generate-antora-yml'
 
-description = 'My Component Docs'
+description = 'My Component Doc'
 
 antora {
     version = '3.2.0-alpha.4'
