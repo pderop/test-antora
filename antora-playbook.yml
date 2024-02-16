@@ -6,11 +6,11 @@ antora:
     - '@antora/collector-extension'
     - '@antora/atlas-extension'
     - require: '@springio/antora-extensions/root-component-extension'
-      root_component_name: 'component1'
+      root_component_name: 'my-component'
 site:
-  title: Component1
+  title: My Component
   url: https://pderop.github.io/test-antora/
-  #start_page: component1::inline-text-formatting.adoc
+  #start_page: my-component::inline-text-formatting.adoc
   #robots: allow
 content:
   sources:
