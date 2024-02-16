@@ -1,6 +1,6 @@
 {
   "$id": "https://schemas.antora.org/site-manifest/1-0-0/draft-01",
-  "generated": "2024-02-16T14:39:20.522Z",
+  "generated": "2024-02-16T14:42:30.203Z",
   "url": "https://pderop.github.io/test-antora",
   "components": {
     "my-component": {
