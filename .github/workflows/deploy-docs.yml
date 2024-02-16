@@ -42,7 +42,7 @@ jobs:
         with:
           #token: ${{ secrets.DOCS_PAGES_TOKEN }}
           #repository-name: pderop/test-antora-pages
-          target-folder: my-component/reference
+          target-folder: .
           folder: build/site # The folder the action should deploy.
           clean: true
           force: true
