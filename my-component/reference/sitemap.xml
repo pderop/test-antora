@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://pderop.github.io/test-antora-pages/component1/reference/my-component/admonition.html</loc>
+<lastmod>2024-02-16T13:29:48.823Z</lastmod>
+</url>
+<url>
+<loc>https://pderop.github.io/test-antora-pages/component1/reference/my-component/index.html</loc>
+<lastmod>2024-02-16T13:29:48.823Z</lastmod>
+</url>
+<url>
+<loc>https://pderop.github.io/test-antora-pages/component1/reference/my-component/inline-text-formatting.html</loc>
+<lastmod>2024-02-16T13:29:48.823Z</lastmod>
+</url>
+<url>
+<loc>https://pderop.github.io/test-antora-pages/component1/reference/my-component/lists/ordered-list.html</loc>
+<lastmod>2024-02-16T13:29:48.823Z</lastmod>
+</url>
+<url>
+<loc>https://pderop.github.io/test-antora-pages/component1/reference/my-component/lists/unordered-list.html</loc>
+<lastmod>2024-02-16T13:29:48.823Z</lastmod>
+</url>
+<url>
+<loc>https://pderop.github.io/test-antora-pages/component1/reference/my-component/sidebar.html</loc>
+<lastmod>2024-02-16T13:29:48.823Z</lastmod>
+</url>
+<url>
+<loc>https://pderop.github.io/test-antora-pages/component1/reference/my-component/special-characters.html</loc>
+<lastmod>2024-02-16T13:29:48.823Z</lastmod>
+</url>
+<url>
+<loc>https://pderop.github.io/test-antora-pages/component1/reference/my-component/ui-macros.html</loc>
+<lastmod>2024-02-16T13:29:48.823Z</lastmod>
+</url>
+</urlset>
