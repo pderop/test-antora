@@ -23,7 +23,7 @@ content:
       start_path: docs
 asciidoc:
   attributes:
-    page-stackoverflow-url: https://stackoverflow.com/tags/antora
+    page-stackoverflow-url: https://stackoverflow.com/tags/[antora]
     page-pagination: ''
     hide-uri-scheme: '@'
     tabs-sync-option: '@'
