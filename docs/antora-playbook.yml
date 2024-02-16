@@ -10,7 +10,7 @@ antora:
       root_component_name: 'my-component'
 site:
   title: My Component
-  url: https://pderop.github.io/test-antora-pages/my-component/reference/
+  url: https://pderop.github.io/test-antora/my-component/reference/
   #start_page: my-component::inline-text-formatting.adoc
 content:
   sources:
