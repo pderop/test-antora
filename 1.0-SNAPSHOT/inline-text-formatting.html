@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Admonition :: My Component</title>
-    <link rel="canonical" href="https://pderop.github.io/test-antora/admonition.html">
-    <link rel="prev" href="special-characters.html">
-    <link rel="next" href="sidebar.html">
+    <title>Inline Text Formatting :: My Component</title>
+    <link rel="canonical" href="https://pderop.github.io/test-antora/inline-text-formatting.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="special-characters.html">
     <meta name="generator" content="Antora 3.2.0-alpha.2">
-    <link rel="stylesheet" href="./_/css/site.css">
+    <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
 <header class="header">
@@ -50,7 +50,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="my-component" data-version="1.0.0">
+<div class="nav-container" data-component="my-component" data-version="1.0.1">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -60,13 +60,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="inline-text-formatting.html">Inline Text Formatting</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="special-characters.html">Special Characters and Symbols</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="admonition.html">Admonition</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -95,17 +95,17 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">My Component</span>
-    <span class="version">1.0.0</span>
+    <span class="version">1.0.1-SNAPSHOT</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <div class="title"><a href="index.html">My Component</a></div>
+      <div class="title"><a href="../index.html">My Component</a></div>
       <ul class="versions">
-        <li class="version">
-          <a href="1.0-SNAPSHOT/index.html">1.0.1-SNAPSHOT</a>
+        <li class="version is-current">
+          <a href="index.html">1.0.1-SNAPSHOT</a>
         </li>
-        <li class="version is-current is-latest">
-          <a href="index.html">1.0.0</a>
+        <li class="version is-latest">
+          <a href="../index.html">1.0.0</a>
         </li>
       </ul>
     </li>
@@ -120,187 +120,143 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">My Component</a></li>
-    <li><a href="admonition.html">Admonition</a></li>
+    <li><a href="inline-text-formatting.html">Inline Text Formatting</a></li>
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">1.0.0</button>
+  <button class="version-menu-toggle" title="Show other versions of page">1.0.1-SNAPSHOT</button>
   <div class="version-menu">
-    <a class="version" href="1.0-SNAPSHOT/admonition.html">1.0.1-SNAPSHOT</a>
-    <a class="version is-current" href="admonition.html">1.0.0</a>
+    <a class="version is-current" href="inline-text-formatting.html">1.0.1-SNAPSHOT</a>
+    <a class="version" href="../inline-text-formatting.html">1.0.0</a>
   </div>
 </div>
-<div class="edit-this-page"><a href="https://github.com/pderop/test-antora/blob/v1.0.0/docs/modules/ROOT/pages/admonition.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/pderop/test-antora/edit/main/docs/modules/ROOT/pages/inline-text-formatting.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Admonition</h1>
-<div class="sect1">
-<h2 id="_admonition_styles"><a class="anchor" href="#_admonition_styles"></a>Admonition styles</h2>
+<h1 class="page">Inline Text Formatting</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>An admonition, also known as a notice, helps draw attention to a line or block of text with a special label or icon.</p>
-</div>
-<div class="paragraph">
-<p>Asciidoctor comes with five built-in styles.</p>
+<p>You can add the following inline styles to your content:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>NOTE</p>
+<p>Bold</p>
 </li>
 <li>
-<p>TIP</p>
+<p>Italic</p>
 </li>
 <li>
-<p>IMPORTANT</p>
+<p>Monospace</p>
 </li>
 <li>
-<p>CAUTION</p>
-</li>
-<li>
-<p>WARNING</p>
+<p>Highlight</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_basic_admonition"><a class="anchor" href="#_basic_admonition"></a>Basic admonition</h2>
+<h2 id="_bold_and_italic"><a class="anchor" href="#_bold_and_italic"></a>Bold and italic</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>You can bold and italic entire phrases, a word, and characters in a word.</p>
+</div>
 <div class="listingblock">
-<div class="title">Basic admonitions</div>
+<div class="title">Bold and italic inline formatting</div>
 <div class="content">
-<pre>CAUTION: Don't stick forks in electric sockets.
+<pre>*bold phrase* &amp; **char**acter**s**
 
-TIP: After someone sticks a fork in a socket, you'll need to reset the circuit in the breaker box in the dark and scary basement.
+_italic phrase_ &amp; __char__acter__s__
 
-WARNING: Never go into the basement.
-
-IMPORTANT: A monster lives in the basement.
-
-NOTE: If you go into the basement, see if you can find Kenny's orange parka.</pre>
+*_bold italic phrase_* &amp; **__char__**acter**__s__**</pre>
 </div>
 </div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-Don&#8217;t stick forks in electric sockets.
-</td>
-</tr>
-</table>
+<div class="exampleblock">
+<div class="title">Result</div>
+<div class="content">
+<div class="paragraph">
+<p><strong>bold phrase</strong> &amp; <strong>char</strong>acter<strong>s</strong></p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-After someone sticks a fork in a socket, you&#8217;ll need to reset the circuit in the breaker box in the dark and scary basement.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p><em>italic phrase</em> &amp; <em>char</em>acter<em>s</em></p>
 </div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Never go into the basement.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p><strong><em>bold italic phrase</em></strong> &amp; <strong><em>char</em></strong>acter<strong><em>s</em></strong></p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-A monster lives in the basement.
-</td>
-</tr>
-</table>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If you go into the basement, see if you can find Kenny&#8217;s orange parka.
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_complex_admonition"><a class="anchor" href="#_complex_admonition"></a>Complex admonition</h2>
+<h2 id="_monospace"><a class="anchor" href="#_monospace"></a>Monospace</h2>
 <div class="sectionbody">
-<div class="listingblock">
-<div class="title">Example block masquerading as an admonition</div>
-<div class="content">
-<pre>[IMPORTANT]
-.Optional title
-====
-Use an example block to create an admonition that contains complex content, such as (but not limited to):
-
-* Lists
-* Multiple paragraphs
-* Source code
-* Images
-====</pre>
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="title">Optional title</div>
 <div class="paragraph">
-<p>Use an example block to create an admonition that contains complex content, such as (but not limited to):</p>
+<p>You can monospace entire phrases, a word, and characters in a word.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Lists</p>
-</li>
-<li>
-<p>Multiple paragraphs</p>
-</li>
-<li>
-<p>Source code</p>
-</li>
-<li>
-<p>Images</p>
-</li>
-</ul>
+<div class="listingblock">
+<div class="title">Monospace inline formatting</div>
+<div class="content">
+<pre>`monospace phrase` &amp; ``char``acter``s``
+
+`*monospace bold phrase*` &amp; ``**char**``acter``**s**``
+
+`_monospace italic phrase_` &amp; ``__char__``acter``__s__``
+
+`*_monospace bold italic phrase_*` &amp;
+``**__char__**``acter``**__s__**``</pre>
 </div>
-</td>
-</tr>
-</table>
+</div>
+<div class="exampleblock">
+<div class="title">Result</div>
+<div class="content">
+<div class="paragraph">
+<p><code>monospace phrase</code> &amp; <code>char</code>acter<code>s</code></p>
+</div>
+<div class="paragraph">
+<p><code><strong>monospace bold phrase</strong></code> &amp; <code><strong>char</strong></code>acter<code><strong>s</strong></code></p>
+</div>
+<div class="paragraph">
+<p><code><em>monospace italic phrase</em></code> &amp; <code><em>char</em></code>acter<code><em>s</em></code></p>
+</div>
+<div class="paragraph">
+<p><code><strong><em>monospace bold italic phrase</em></strong></code> &amp;
+<code><strong><em>char</em></strong></code>acter<code><strong><em>s</em></strong></code></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_highlight"><a class="anchor" href="#_highlight"></a>Highlight</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can highlight entire phrases, a word, and characters in a word.</p>
+</div>
+<div class="listingblock">
+<div class="title">Highlight inline formatting</div>
+<div class="content">
+<pre>Let's #highlight this phrase# and part of th##is##.</pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Result</div>
+<div class="content">
+<div class="paragraph">
+<p>Let&#8217;s <mark>highlight this phrase</mark> and part of th<mark>is</mark>.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="special-characters.html">Special Characters and Symbols</a></span>
-  <span class="next"><a href="sidebar.html">Sidebar</a></span>
+  <span class="prev"><a href="index.html">My Component</a></span>
+  <span class="next"><a href="special-characters.html">Special Characters and Symbols</a></span>
 </nav>
 </article>
   </div>
@@ -310,7 +266,7 @@ Use an example block to create an admonition that contains complex content, such
   <p>This page was built using the Antora default UI.</p>
   <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
 </footer>
-<script id="site-script" src="./_/js/site.js" data-ui-root-path="./_"></script>
-<script async src="./_/js/vendor/highlight.js"></script>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
   </body>
 </html>
