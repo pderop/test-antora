@@ -44,5 +44,5 @@ jobs:
           #repository-name: pderop/test-antora-pages
           target-folder: .
           folder: build/site # The folder the action should deploy.
-          clean: true
+          clean: false
           force: true
