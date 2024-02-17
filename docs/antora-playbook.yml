@@ -15,7 +15,9 @@ site:
 content:
   sources:
     - url: ./..
-      branches: HEAD
+      branches:
+        - 'main'
+        - '1.0.x'
       tags:
         - 'v1.0.*'
         - 'v1.1.*'
