@@ -18,6 +18,7 @@ content:
       branches: HEAD
       tags:
         - 'v1.0.*'
+        - 'v1.1.*'
       start_path: docs
       worktrees: true
 asciidoc:
