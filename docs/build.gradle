@@ -57,4 +57,3 @@ javadoc {
 tasks.withType(AbstractPublishToMaven).configureEach {
     enabled = false
 }
-

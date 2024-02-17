@@ -1,2 +1,8 @@
 rootProject.name = 'test-antora'
-include 'docs'
+
+if (hasProperty('docs')) {
+    include 'docs'
+}
+
+
+
