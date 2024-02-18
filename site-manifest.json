@@ -1,55 +1,53 @@
 {
   "$id": "https://schemas.antora.org/site-manifest/1-0-0/draft-01",
-  "generated": "2024-02-18T12:24:57.703Z",
+  "generated": "2024-02-18T12:27:28.416Z",
   "url": "https://pderop.github.io/test-antora",
   "components": {
     "my-component": {
       "title": "My Component",
-      "latest": "1.0.41",
+      "latest": "1.1.16",
       "versions": {
         "1.1.16": {
-          "prerelease": true,
-          "displayVersion": "1.1.16-SNAPSHOT",
-          "url": "/1.1-SNAPSHOT/index.html",
+          "url": "/index.html",
           "pages": [
             {
               "path": "index.adoc",
-              "url": "/1.1-SNAPSHOT/index.html",
+              "url": "/index.html",
               "title": "My Component Documentation"
             },
             {
               "path": "admonition.adoc",
-              "url": "/1.1-SNAPSHOT/admonition.html",
+              "url": "/admonition.html",
               "title": "Admonition"
             },
             {
               "path": "inline-text-formatting.adoc",
-              "url": "/1.1-SNAPSHOT/inline-text-formatting.html",
+              "url": "/inline-text-formatting.html",
               "title": "Inline Text Formatting"
             },
             {
               "path": "lists/ordered-list.adoc",
-              "url": "/1.1-SNAPSHOT/lists/ordered-list.html",
+              "url": "/lists/ordered-list.html",
               "title": "Ordered Lists"
             },
             {
               "path": "lists/unordered-list.adoc",
-              "url": "/1.1-SNAPSHOT/lists/unordered-list.html",
+              "url": "/lists/unordered-list.html",
               "title": "Unordered Lists"
             },
             {
               "path": "sidebar.adoc",
-              "url": "/1.1-SNAPSHOT/sidebar.html",
+              "url": "/sidebar.html",
               "title": "Sidebar"
             },
             {
               "path": "special-characters.adoc",
-              "url": "/1.1-SNAPSHOT/special-characters.html",
+              "url": "/special-characters.html",
               "title": "Special Characters and Symbols"
             },
             {
               "path": "ui-macros.adoc",
-              "url": "/1.1-SNAPSHOT/ui-macros.html",
+              "url": "/ui-macros.html",
               "title": "User Interface Macros"
             }
           ]
