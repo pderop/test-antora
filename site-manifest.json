@@ -1,6 +1,6 @@
 {
   "$id": "https://schemas.antora.org/site-manifest/1-0-0/draft-01",
-  "generated": "2024-02-18T12:19:35.215Z",
+  "generated": "2024-02-18T12:24:57.703Z",
   "url": "https://pderop.github.io/test-antora",
   "components": {
     "my-component": {
@@ -50,6 +50,53 @@
             {
               "path": "ui-macros.adoc",
               "url": "/1.1-SNAPSHOT/ui-macros.html",
+              "title": "User Interface Macros"
+            }
+          ]
+        },
+        "1.0.42": {
+          "prerelease": true,
+          "displayVersion": "1.0.42-SNAPSHOT",
+          "url": "/1.0-SNAPSHOT/index.html",
+          "pages": [
+            {
+              "path": "index.adoc",
+              "url": "/1.0-SNAPSHOT/index.html",
+              "title": "My Component Documentation"
+            },
+            {
+              "path": "admonition.adoc",
+              "url": "/1.0-SNAPSHOT/admonition.html",
+              "title": "Admonition"
+            },
+            {
+              "path": "inline-text-formatting.adoc",
+              "url": "/1.0-SNAPSHOT/inline-text-formatting.html",
+              "title": "Inline Text Formatting"
+            },
+            {
+              "path": "lists/ordered-list.adoc",
+              "url": "/1.0-SNAPSHOT/lists/ordered-list.html",
+              "title": "Ordered Lists"
+            },
+            {
+              "path": "lists/unordered-list.adoc",
+              "url": "/1.0-SNAPSHOT/lists/unordered-list.html",
+              "title": "Unordered Lists"
+            },
+            {
+              "path": "sidebar.adoc",
+              "url": "/1.0-SNAPSHOT/sidebar.html",
+              "title": "Sidebar"
+            },
+            {
+              "path": "special-characters.adoc",
+              "url": "/1.0-SNAPSHOT/special-characters.html",
+              "title": "Special Characters and Symbols"
+            },
+            {
+              "path": "ui-macros.adoc",
+              "url": "/1.0-SNAPSHOT/ui-macros.html",
               "title": "User Interface Macros"
             }
           ]

@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>User Interface Macros :: My Component</title>
-    <link rel="canonical" href="https://pderop.github.io/test-antora/ui-macros.html">
-    <link rel="prev" href="sidebar.html">
-    <link rel="next" href="lists/ordered-list.html">
+    <title>Inline Text Formatting :: My Component</title>
+    <link rel="canonical" href="https://pderop.github.io/test-antora/inline-text-formatting.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="special-characters.html">
     <meta name="generator" content="Antora 3.2.0-alpha.2">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
@@ -50,7 +50,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="my-component" data-version="1.1.16">
+<div class="nav-container" data-component="my-component" data-version="1.0.42">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -60,7 +60,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="inline-text-formatting.html">Inline Text Formatting</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -72,7 +72,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="sidebar.html">Sidebar</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="ui-macros.html">User Interface Macros</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -95,17 +95,17 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">My Component</span>
-    <span class="version">1.1.16-SNAPSHOT</span>
+    <span class="version">1.0.42-SNAPSHOT</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">My Component</a></div>
       <ul class="versions">
-        <li class="version is-current">
-          <a href="index.html">1.1.16-SNAPSHOT</a>
-        </li>
         <li class="version">
-          <a href="../1.0-SNAPSHOT/index.html">1.0.42-SNAPSHOT</a>
+          <a href="../1.1-SNAPSHOT/index.html">1.1.16-SNAPSHOT</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">1.0.42-SNAPSHOT</a>
         </li>
         <li class="version is-latest">
           <a href="../index.html">1.0.41</a>
@@ -123,146 +123,144 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">My Component</a></li>
-    <li><a href="ui-macros.html">User Interface Macros</a></li>
+    <li><a href="inline-text-formatting.html">Inline Text Formatting</a></li>
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">1.1.16-SNAPSHOT</button>
+  <button class="version-menu-toggle" title="Show other versions of page">1.0.42-SNAPSHOT</button>
   <div class="version-menu">
-    <a class="version is-current" href="ui-macros.html">1.1.16-SNAPSHOT</a>
-    <a class="version" href="../1.0-SNAPSHOT/ui-macros.html">1.0.42-SNAPSHOT</a>
-    <a class="version" href="../ui-macros.html">1.0.41</a>
+    <a class="version" href="../1.1-SNAPSHOT/inline-text-formatting.html">1.1.16-SNAPSHOT</a>
+    <a class="version is-current" href="inline-text-formatting.html">1.0.42-SNAPSHOT</a>
+    <a class="version" href="../inline-text-formatting.html">1.0.41</a>
   </div>
 </div>
-<div class="edit-this-page"><a href="https://github.com/pderop/test-antora/edit/main/docs/modules/ROOT/pages/ui-macros.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/pderop/test-antora/edit/1.0.x/docs/modules/ROOT/pages/inline-text-formatting.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">User Interface Macros</h1>
+<h1 class="page">Inline Text Formatting</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Asciidoctor has three user interface (UI) macros:</p>
+<p>You can add the following inline styles to your content:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Button <code>btn:[]</code></p>
+<p>Bold</p>
 </li>
 <li>
-<p>Keyboard <code>kbd:[]</code></p>
+<p>Italic</p>
 </li>
 <li>
-<p>Menu <code>menu:[]</code></p>
+<p>Monospace</p>
+</li>
+<li>
+<p>Highlight</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-The <code>:experimental:</code> attribute must be set in the document header, component version descriptor (<em>antora.yml</em>), or globally in your Antora playbook (<em>antora-playbook.yml</em>) to enable UI macros.
-</td>
-</tr>
-</table>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_button"><a class="anchor" href="#_button"></a>Button</h2>
+<h2 id="_bold_and_italic"><a class="anchor" href="#_bold_and_italic"></a>Bold and italic</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Communicate that a user should press a button with the button macro.</p>
+<p>You can bold and italic entire phrases, a word, and characters in a word.</p>
 </div>
 <div class="listingblock">
-<div class="title">Button UI macro</div>
+<div class="title">Bold and italic inline formatting</div>
 <div class="content">
-<pre>Press the btn:[Submit] button when you are finished the survey.
+<pre>*bold phrase* &amp; **char**acter**s**
 
-Select a file in the file navigator and click btn:[Open].</pre>
+_italic phrase_ &amp; __char__acter__s__
+
+*_bold italic phrase_* &amp; **__char__**acter**__s__**</pre>
 </div>
 </div>
 <div class="exampleblock">
 <div class="title">Result</div>
 <div class="content">
 <div class="paragraph">
-<p>Press the btn:[Submit] button when you are finished the survey.</p>
+<p><strong>bold phrase</strong> &amp; <strong>char</strong>acter<strong>s</strong></p>
 </div>
 <div class="paragraph">
-<p>Select a file in the file navigator and click btn:[Open].</p>
+<p><em>italic phrase</em> &amp; <em>char</em>acter<em>s</em></p>
+</div>
+<div class="paragraph">
+<p><strong><em>bold italic phrase</em></strong> &amp; <strong><em>char</em></strong>acter<strong><em>s</em></strong></p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_keyboard"><a class="anchor" href="#_keyboard"></a>Keyboard</h2>
+<h2 id="_monospace"><a class="anchor" href="#_monospace"></a>Monospace</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Create keyboard shortcuts with the keyboard macro.</p>
+<p>You can monospace entire phrases, a word, and characters in a word.</p>
 </div>
 <div class="listingblock">
-<div class="title">Keyboard UI macro</div>
+<div class="title">Monospace inline formatting</div>
 <div class="content">
-<pre>Press kbd:[esc] to exit insert mode.
+<pre>`monospace phrase` &amp; ``char``acter``s``
 
-Use the shortcut kbd:[Ctrl+T] to open a new tab in your browser.
+`*monospace bold phrase*` &amp; ``**char**``acter``**s**``
 
-kbd:[Ctrl+Shift+N] will open a new incognito window.</pre>
+`_monospace italic phrase_` &amp; ``__char__``acter``__s__``
+
+`*_monospace bold italic phrase_*` &amp;
+``**__char__**``acter``**__s__**``</pre>
 </div>
 </div>
 <div class="exampleblock">
 <div class="title">Result</div>
 <div class="content">
 <div class="paragraph">
-<p>Press kbd:[esc] to exit insert mode.</p>
+<p><code>monospace phrase</code> &amp; <code>char</code>acter<code>s</code></p>
 </div>
 <div class="paragraph">
-<p>Use the shortcut kbd:[Ctrl+T] to open a new tab in your browser.</p>
+<p><code><strong>monospace bold phrase</strong></code> &amp; <code><strong>char</strong></code>acter<code><strong>s</strong></code></p>
 </div>
 <div class="paragraph">
-<p>kbd:[Ctrl+Shift+N] will open a new incognito window.</p>
+<p><code><em>monospace italic phrase</em></code> &amp; <code><em>char</em></code>acter<code><em>s</em></code></p>
+</div>
+<div class="paragraph">
+<p><code><strong><em>monospace bold italic phrase</em></strong></code> &amp;
+<code><strong><em>char</em></strong></code>acter<code><strong><em>s</em></strong></code></p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_menu"><a class="anchor" href="#_menu"></a>Menu</h2>
+<h2 id="_highlight"><a class="anchor" href="#_highlight"></a>Highlight</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Show readers how to select a menu item with the menu macro.</p>
+<p>You can highlight entire phrases, a word, and characters in a word.</p>
 </div>
 <div class="listingblock">
-<div class="title">Menu UI macro</div>
+<div class="title">Highlight inline formatting</div>
 <div class="content">
-<pre>To save the file, select menu:File[Save].
-
-Select menu:View[Zoom &gt; Reset] to reset the zoom level to the default setting.</pre>
+<pre>Let's #highlight this phrase# and part of th##is##.</pre>
 </div>
 </div>
 <div class="exampleblock">
 <div class="title">Result</div>
 <div class="content">
 <div class="paragraph">
-<p>To save the file, select menu:File[Save].</p>
-</div>
-<div class="paragraph">
-<p>Select menu:View[Zoom &gt; Reset] to reset the zoom level to the default setting.</p>
+<p>Let&#8217;s <mark>highlight this phrase</mark> and part of th<mark>is</mark>.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="sidebar.html">Sidebar</a></span>
-  <span class="next"><a href="lists/ordered-list.html">Ordered Lists</a></span>
+  <span class="prev"><a href="index.html">My Component</a></span>
+  <span class="next"><a href="special-characters.html">Special Characters and Symbols</a></span>
 </nav>
 </article>
   </div>
